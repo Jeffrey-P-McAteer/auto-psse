@@ -20,3 +20,6 @@ intel2/
 intel2/*
 
 *.mod
+*.o
+
+
