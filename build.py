@@ -54,7 +54,7 @@ def main(args=sys.argv):
 
   cmd('ifx', *warning_args, '-o', main_bin, 'main.f90', '-Bstatic', alib_static_bin)
 
-  cmd(main_bin, '')
+  cmd(main_bin, *args[1:])
 
 
 
