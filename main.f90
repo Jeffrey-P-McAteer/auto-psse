@@ -20,4 +20,7 @@ PROGRAM MAIN
   M = FOO(3)
   WRITE (*,*) M
 
+  CALL FOO2(6, M)
+  WRITE (*,*) M
+
 END PROGRAM MAIN
