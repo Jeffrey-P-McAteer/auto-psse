@@ -2,18 +2,23 @@ PROGRAM MAIN
   USE ALIB
   IMPLICIT NONE
 
-  integer :: num_args, ix
-  character(len=128), dimension(:), allocatable :: args ! dynamic list of N 128-length strings.
+  integer :: num_args
 
-  integer m
+  character(len=280) :: input_json
+  character(len=280) :: output_sav
+
+  integer M
 
   num_args = command_argument_count()
-  allocate(args(num_args))
+
+  if (num_args.gt.0) then
+    call get_command_argument(1,input_json)
+    write (*,'("input_json = ", A)') input_json
+  end if
 
   if (num_args.gt.1) then
-    ix = 1
-    call get_command_argument(ix,args(ix))
-    WRITE (*,*) args(ix)
+    call get_command_argument(2,output_sav)
+    write (*,'("output_sav = ", A)') output_sav
   end if
 
 
